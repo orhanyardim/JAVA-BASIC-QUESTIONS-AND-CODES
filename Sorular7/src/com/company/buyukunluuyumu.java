@@ -34,7 +34,7 @@ public class buyukunluuyumu {
 
     }
 
-    static boolean incemi(String str){
+    static boolean incemi(String str){//ilk harfin ince mi yoksa kalın mı olduğuna bakar
         int j=0;
         for (int i=0;i<str.length();i++){
             if(str.charAt(i)==incesesli[j])
