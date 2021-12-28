@@ -10,6 +10,8 @@ public class Main {
         String sentence=scr.nextLine();
         String words[]=sentence.split(" ");
 
+        //trim ,lowercase,nokta ve virgülleri sil.STRING ILE ISLEM YAPACAKSAN BU ON ISLEMLERI YAP
+
         int count=0; int index=0;
         for(int i=0;i< words.length;i++){
             if(count<words[i].length()){
