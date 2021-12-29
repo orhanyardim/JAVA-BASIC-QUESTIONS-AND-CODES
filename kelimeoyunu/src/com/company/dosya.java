@@ -39,7 +39,7 @@ public class dosya {
             lines.add(str);
 
         }
-        //System.out.println(lines.size());
+
         bufreader.reset();
 
         return lines;

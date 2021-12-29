@@ -22,6 +22,7 @@ public class Main {
         char kelimearray[]=kelime.toCharArray();
         //System.out.println(kelime);
         int hak=5;
+        int puan=0;
         long sure=20;
         for(int i=0;i<kelime.length();i++){
             kelimearray[i]='_';
@@ -42,6 +43,8 @@ public class Main {
                 System.out.println((i+1)+". Harf");
                 System.out.println("Süre:"+sure);
                 System.out.println("HAK:"+hak);
+                System.out.println("PUAN:"+puan);
+
 
                 //TIME SETTINGS
                 long then=System.currentTimeMillis();
@@ -64,6 +67,7 @@ public class Main {
 
                     if(i==kelime.length()-1){
                         System.out.println("Doğru Kelime Bravo");
+                        puan+=10;
                         break;
                     }
                     kelimearray[i]=harf;
@@ -73,6 +77,7 @@ public class Main {
                 else{
                     hak--;
                     System.out.println("Yanlış Cevap\nHAK:"+hak);
+
                 }
             }
         }
@@ -84,8 +89,5 @@ public class Main {
             System.out.println("Süre Bitti");
         if(hak==0)
             System.out.println("Hak Bitti");
-        System.out.println("Oyun Bitti \nPUAN:");
-
-
     }
 }
