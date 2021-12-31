@@ -13,10 +13,9 @@ public class Main {
 
 
         System.out.println("-------------HOŞGELDİNİZ-------------");
-
+        String ANSI_RED = "\u001B[31m";
+        System.out.println(ANSI_RED+"This text red");
         String kelime= yenidosya.kelimecek(yenidosya.oku());
-        while(kelime==null)
-            kelime= yenidosya.kelimecek(yenidosya.oku());
 
         //String temp=kelime;
         char kelimearray[]=kelime.toCharArray();
