@@ -11,6 +11,7 @@ public class Cards {
     char number;
     String color;
 
+
     private String getColor(){
         return color;
     }
@@ -28,7 +29,7 @@ public class Cards {
     }
   //-----------------------------GET-SET-END--------------------------------------------------
 
-    
+
     //ARRAY OF NUMBERS
     char CardNumbers[]={'A','2','3','4','5','6','7','8','9','0','J','Q','K'};//     '0' IS MEANS NUMBER 10!!!
 
@@ -39,45 +40,29 @@ public class Cards {
 
 
     //ARRAYLIST OF PULLEDCARDS
-    List<String> PulledCards=new ArrayList<>();
+    List<String> DrawedCards=new ArrayList<>();
 
     //PULL RANDOM CARD
     Random rnd=new Random();
 
-    Cards  pullCard(){
+    Cards  drawCard(){
         this.setNumber(CardNumbers[rnd.nextInt(0,13)]);
         this.setColor(CardColors[rnd.nextInt(0,4)]);
 
         if(!this.isAlreadyPulled(this))
             return this;
         else
-            return pullCard();
+            return drawCard();
 
     }
 
     boolean isAlreadyPulled(Cards pulledCard){
 
-
-        if(PulledCards.contains(this.number+this.color))
+        if(DrawedCards.contains(this.number+this.color))
             return true;
         else{
-            PulledCards.add(this.number+this.color);
+            DrawedCards.add(this.number+this.color);
             return false;
         }
-        /*for(int i=0;i<PulledCards.size();i++){
-            if(PulledCards.get(i)==cardtemp.number+cardtemp.color)
-                return false;
-            else if(i==PulledCards.size()-1)
-                PulledCards.add(cardtemp.number+cardtemp.color);
-        }*/
-
-
     }
-
-
-
-
-
-
-
 }
