@@ -4,14 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Player {
-
-     private int cardsCollect=0;
+    private String res = "\u001B[0m"; //TO RESET CONSOLE COLOR
+    private int cardsCollect=0;
       List<String> myCards=new ArrayList<>();
 
-     /*public Player(){
-         cardsCollect=0;
-         seperateNumber();
-     }*/
 //-----------------------------------GET-SET-START-----------------------------------------
     public int getCardsCollect() {
          seperateNumber();
@@ -33,23 +29,36 @@ public class Player {
 
     private void seperateNumber(){
         cardsCollect=0;
+        boolean isThere_A=false;
          for (int i=0;i<myCards.size();i++){
              int number=0;
              char value=myCards.get(i).charAt(myCards.get(i).length()-1);
-             if(value=='A'| value=='Q'|value=='J'|value=='K'|value=='0')
+             if(value=='Q'|value=='J'|value=='K'|value=='0')
                  number=10;
+             else if(value=='A'){
+                 isThere_A=true;
+             }
              else
                  number=Character.getNumericValue(value);
 
              cardsCollect=cardsCollect+number;
 
          }
+         if(isThere_A){
+             if(cardsCollect+11<=21)
+                 cardsCollect=cardsCollect+11;
+             else
+                 cardsCollect++;
+         }
 
     }
 
     public void printMyCards(){
+        seperateNumber();
          for (int i=0;i< myCards.size();i++){
              System.out.print(myCards.get(i)+", ");
+
          }
+         System.out.println(res+"Cards Collect="+cardsCollect);
     }
 }

@@ -49,14 +49,14 @@ public class Cards {
         this.setNumber(CardNumbers[rnd.nextInt(0,13)]);
         this.setColor(CardColors[rnd.nextInt(0,4)]);
 
-        if(!this.isAlreadyPulled(this))
+        if(!this.isAlreadyDrawed(this))
             return this;
         else
             return drawCard();
 
     }
 
-    boolean isAlreadyPulled(Cards pulledCard){
+    boolean isAlreadyDrawed(Cards pulledCard){
 
         if(DrawedCards.contains(this.number+this.color))
             return true;
