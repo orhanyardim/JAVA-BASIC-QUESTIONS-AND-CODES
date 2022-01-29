@@ -7,6 +7,8 @@ public class Main {
     public static void main(String[] args) {
         student ogrenci=new student("Kerim","111111111");
         Scanner scr=new Scanner(System.in);
+        student harun=new student("harun","204410022");
+
 
         //ÖĞRENCİ ADI DÖNDÜRME
 

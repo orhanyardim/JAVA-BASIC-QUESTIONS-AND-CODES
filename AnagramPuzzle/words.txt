@@ -1,0 +1,11 @@
+chair
+desk
+computer
+begineer
+compute
+value
+build
+overloading
+stack
+queue
+array
