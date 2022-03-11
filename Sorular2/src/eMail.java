@@ -10,7 +10,7 @@ public class eMail {
         int noktaindex=0;
         int nokta2index=0;
         int kontrol=0;
-        int atindex=0;
+        
 
         for(int i=0;i<email.length();i++){
 
